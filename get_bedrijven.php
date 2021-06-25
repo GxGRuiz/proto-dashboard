@@ -15,7 +15,7 @@ include_once("config.php");
 
 $link_accounts = new mysqli(host, username, password, database_accounts); 
 
-$result = $link_accounts->query("SELECT bedrijf FROM adviesbureauRenB")->fetch_all(MYSQLI_ASSOC);
+$result = $link_accounts->query("SELECT bedrijf FROM dummy")->fetch_all(MYSQLI_ASSOC);
 
 for ($i = 0; $i < count($result); $i++){
      $bedrijven .= "<option>" . $result[$i]["bedrijf"] . "</option>"; 
